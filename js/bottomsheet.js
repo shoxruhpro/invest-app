@@ -1,5 +1,3 @@
-/* Created by Tivotal */
-
 let bottomSheet = document.querySelector("#bottom-sheet");
 let overlay = document.querySelector(".overlay");
 let content = document.querySelector(".content");
@@ -19,6 +17,7 @@ let updateHeight = (height) => {
 };
 
 let showSheet = (height) => {
+  document.documentElement.requestFullscreen();
   defaultHeight = height;
   bottomSheet.classList.add("show");
 

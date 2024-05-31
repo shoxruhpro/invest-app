@@ -1,7 +1,6 @@
 const cardInBottomSheet = document.querySelector("#bottom-sheet .card");
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.requestFullscreen();
   document.querySelector("main.container").style.display = "block";
   document.querySelector("nav").style.display = "flex";
   document.querySelector(".loading").style.display = "none";

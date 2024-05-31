@@ -7,6 +7,8 @@
 
 body {
   max-width: 400px;
+  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
   font-weight: 600;
   font-family: "Inter", sans-serif;
   font-size: 14px;
