@@ -161,6 +161,7 @@ ul.history > li > img {
 
 #faq-content {
   display: none;
+  overflow: scroll !important;
 }
 
 #faq-content > p {
@@ -183,7 +184,7 @@ form {
   align-items: center;
   gap: 15px;
   font-size: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 }
 
 .form-title > svg {
@@ -193,12 +194,10 @@ form {
 .input-control {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 17px;
 }
 
 .input-control > input {
   width: 100%;
-  padding: 16px 19px;
   border-radius: 10px 0px 0px 10px;
   font-size: 13px;
 }
@@ -209,7 +208,7 @@ form {
   background: rgba(231, 243, 255, 1);
   border-radius: 0px 10px 10px 0px;
   width: 54px;
-  height: 53px;
+  height: 31px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -217,12 +216,13 @@ form {
 }
 
 .invest-info {
-  padding: 19px 80px;
+  padding: 19px 0;
+  text-align: center;
   font-weight: 500;
   font-size: 11px;
   border: 1.3px dashed var(--grey-color);
   border-radius: 15px;
-  margin-bottom: 36px;
+  margin: 6px 0 12px;
 }
 
 .invest-info > span {
@@ -231,12 +231,12 @@ form {
 
 .invest-warning {
   color: rgba(243, 123, 123, 1);
-  padding: 17px 48px;
+  padding: 8px 48px;
   font-weight: 500;
   font-size: 11px;
   border: 1.3px dashed rgba(243, 123, 123, 1);
   border-radius: 15px;
-  margin-top: 12px;
+  margin-top: 6px;
   text-align: center;
 }
 
@@ -245,7 +245,7 @@ form {
 }
 
 .label-text {
-  margin: 24px 0 12px;
+  margin: 14px 0 12px;
   display: block;
   font-size: 11px;
   font-weight: 500;
@@ -255,10 +255,6 @@ form {
   display: flex;
   gap: 14px;
   justify-content: space-evenly;
-}
-
-.input-group > input {
-  padding: 16px 17px;
 }
 
 #topup-info {

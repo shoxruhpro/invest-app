@@ -10,7 +10,7 @@ let isDragging = false,
 
 const updateHeight = (height) => {
   //updating sheet height
-  content.style.height = height ? `${height}vh` : "max-content";
+  content.style.height = `${height}vh`;
 
   // if the sheet height is equal to 100 then toggling fullsceen class to bottom sheet
   bottomSheet.classList.toggle("fullscreen", height === 100);

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelector("#faq-btn").addEventListener("click", () => {
   document.querySelector("#faq-content").style.display = "block";
   cardInBottomSheet.style.display = "none";
-  showSheet(80);
+  showSheet(97);
 });
 
 document.querySelector("#invest-btn")?.addEventListener("click", () => {
@@ -21,7 +21,7 @@ document.querySelector("#invest-btn")?.addEventListener("click", () => {
 document.querySelector("#withdraw-btn").addEventListener("click", () => {
   document.querySelector("#withdraw-content").style.display = "block";
   cardInBottomSheet.style.display = "block";
-  showSheet(97);
+  showSheet(80);
 });
 
 document.querySelector("#withdraw-nav-btn").addEventListener("click", () => {
@@ -33,13 +33,13 @@ document.querySelector("#withdraw-nav-btn").addEventListener("click", () => {
 document.querySelector("#topup-btn").addEventListener("click", () => {
   document.querySelector("#topup-content").style.display = "block";
   cardInBottomSheet.style.display = "block";
-  showSheet(75);
+  showSheet(94);
 });
 
 document.querySelector("#topup-nav-btn").addEventListener("click", () => {
   document.querySelector("#topup-content").style.display = "block";
   cardInBottomSheet.style.display = "block";
-  showSheet(75);
+  showSheet(94);
 });
 
 /**
