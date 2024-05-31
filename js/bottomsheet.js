@@ -1,14 +1,14 @@
-let bottomSheet = document.querySelector("#bottom-sheet");
-let overlay = document.querySelector(".overlay");
-let content = document.querySelector(".content");
-let dragIcon = document.querySelector(".drag-icon");
+const bottomSheet = document.querySelector("#bottom-sheet");
+const overlay = document.querySelector(".overlay");
+const content = document.querySelector(".content");
+const dragIcon = document.querySelector(".drag-icon");
 let defaultHeight = 97;
 
 let isDragging = false,
   startY,
   startHeight;
 
-let updateHeight = (height) => {
+const updateHeight = (height) => {
   //updating sheet height
   content.style.height = height ? `${height}vh` : "max-content";
 
@@ -16,18 +16,16 @@ let updateHeight = (height) => {
   bottomSheet.classList.toggle("fullscreen", height === 100);
 };
 
-let showSheet = (height) => {
-  document.documentElement.requestFullscreen();
+const showSheet = (height) => {
   defaultHeight = height;
   bottomSheet.classList.add("show");
-
   // updating sheet height with default height 58
   updateHeight(height);
-
   document.body.style.overflow = "hidden";
+  document.documentElement.requestFullscreen({ navigationUI: "hide" });
 };
 
-let hideSheet = () => {
+const hideSheet = () => {
   bottomSheet.classList.remove("show");
   document.body.style.overflow = "auto";
   document
@@ -37,7 +35,7 @@ let hideSheet = () => {
     });
 };
 
-let dragStart = (e) => {
+const dragStart = (e) => {
   isDragging = true;
   bottomSheet.classList.add("dragging");
   //recording intitial y position and sheet height
@@ -45,7 +43,7 @@ let dragStart = (e) => {
   startHeight = parseInt(content.style.height);
 };
 
-let dragging = (e) => {
+const dragging = (e) => {
   //return if isDragging is false
   if (!isDragging) return;
 
@@ -58,7 +56,7 @@ let dragging = (e) => {
   updateHeight(newHeight);
 };
 
-let dragStop = () => {
+const dragStop = () => {
   isDragging = false;
   bottomSheet.classList.remove("dragging");
 
