@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investing - История</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/card.css" />
+    <link rel="stylesheet" href="/css/loader.css" />
+    <link rel="stylesheet" href="/css/bottomsheet.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <script src="/js/bottomsheet.js" defer></script>
+    <script src="/js/main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="loading">
+      <div class="block-center">
+        <div class="loader"></div>
+        <span>Загрузка</span>
+      </div>
+    </div>
+
+    <main class="container">
+      <section class="card card-bg-dark">
+        <div class="card-content">
+          <div class="card-header">
+            <span>ID: 100831</span>
+            <img src="/photos/image.png" alt="" />
+          </div>
+
+          <div class="card-body">
+            <div class="balance-title">Ваш баланс</div>
+            <div class="balance">1 629 900 <span>₽</span></div>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="card-footer-left">
+            <div>Инвестиция: 1 212 600 ₽</div>
+            <div>Ваша выплата: 118 100 ₽</div>
+          </div>
+
+          <div class="card-footer-right">
+            <div class="time-title">Время ожидания</div>
+            <div class="time">15:36:00</div>
+            <div>* Макс 5 дней</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- === MENU START === -->
+      <section id="menu">
+        <a id="topup-btn">
+          <img src="/img/topup.svg" alt="" />
+          <span>Пополнить</span>
+        </a>
+
+        <a id="withdraw-btn">
+          <img src="/img/withdraw.svg" alt="" />
+          <span>Вывести</span>
+        </a>
+
+        <a href="#" style="background: rgba(231, 243, 255, 1)">
+          <img src="/img/history.svg" alt="" />
+          <span>История</span>
+        </a>
+      </section>
+      <!-- === MENU END === -->
+
+      <div id="tabbar">
+        <div id="tab-1" class="active-tab" onclick="handleTabChange(this, 1)">
+          Пополнение
+        </div>
+        <div id="tab-2" onclick="handleTabChange(this, 2)">Вывод</div>
+        <div id="tab-3" onclick="handleTabChange(this, 3)">Инвест</div>
+        <div id="tab-4" onclick="handleTabChange(this, 4)">Бонусы</div>
+      </div>
+
+      <div id="tab-contents">
+        <div id="tab-content-1">
+          <ul class="history">
+            <li>
+              <div class="amount">+71 ₽</div>
+              <div class="history-item-info">
+                <div>
+                  <div class="history-item-name">Пополнение баланса</div>
+                  <span class="history-item-date">17.02.24 / 15:33</span>
+                </div>
+
+                <img src="/img/done.svg" alt="" />
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="tab-content-2">
+          <ul class="history">
+            <li>
+              <div class="amount">+1 671 ₽</div>
+              <div class="history-item-info">
+                <div>
+                  <div class="history-item-name">Выплата</div>
+                  <span class="history-item-date">17.02.24 / 15:33</span>
+                </div>
+
+                <img src="/img/done.svg" alt="" />
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="tab-content-3">
+          <ul class="history">
+            <li>
+              <div class="amount minus">-867 ₽</div>
+              <div class="history-item-info">
+                <div>
+                  <div class="history-item-name">Инвестиция</div>
+                  <span class="history-item-date">26.02.24 / 16:48</span>
+                </div>
+
+                <img src="/img/fail.svg" alt="" />
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="tab-content-4">
+          <ul class="history">
+            <li>
+              <div class="amount">+1 671 ₽</div>
+              <div class="history-item-info">
+                <div>
+                  <div class="history-item-name">
+                    Бонус за друга / Nick name
+                  </div>
+                  <span class="history-item-date">21.02.24 / 27:12</span>
+                </div>
+
+                <img src="/img/done.svg" alt="" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <!-- === BOTTOM SHEET START === -->
+    <div id="bottom-sheet">
+      <div class="overlay"></div>
+
+      <div class="content">
+        <div class="header">
+          <div class="drag-icon">
+            <span></span>
+          </div>
+        </div>
+
+        <div class="body">
+          <section class="card">
+            <div class="card-content">
+              <div class="card-header">
+                <span>ID: 100831</span>
+                <img src="/photos/image.png" alt="" />
+              </div>
+
+              <div class="card-body">
+                <div class="balance-title">Ваш баланс</div>
+                <div class="balance">1 629 900 <span>₽</span></div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="card-footer-left">
+                <div>Инвестиция: 12 600 ₽</div>
+                <div>Ваша выплата: 18 100 ₽</div>
+              </div>
+
+              <div class="card-footer-right">
+                <div class="time-title">Время ожидания</div>
+                <div class="time">00:46:34</div>
+                <div>* Макс 5 дней</div>
+              </div>
+            </div>
+          </section>
+
+          <section id="faq-content">
+            <p>
+              Тут собраны ответы на часто задаваемые вопросы касательно моей
+              работы. Также эти ответы есть у меня в профиле в Instagram в
+              формате видео. Настоятельно рекомендую ознакомиться с ними, чтобы
+              каждый из вас понимал, как проходит весь процесс работы со мной.
+            </p>
+
+            <details>
+              <summary>
+                <span>Чем вы занимаетесь?</span>
+              </summary>
+              <p>Тест</p>
+            </details>
+
+            <details>
+              <summary>
+                <span>Что делать, если выплата не пришла?</span>
+              </summary>
+              <p>
+                Об этом я уже подробно рассказывала в своем видео о работе. Вы
+                можете посмотреть его в моем Telegram канале. Если говорить
+                коротко, то я состою в закрытых сообществах трейдеров, где
+                собираются акулы криптовалютного рынка.
+              </p>
+              <p>
+                Мы заранее ищем потенциальные монеты и на ранних стадиях вливаем
+                в них колоссальные суммы. Когда монета начинает расти, другие
+                участники рынка подключаются, что дает дополнительный импульс
+                для роста монеты.
+              </p>
+            </details>
+
+            <button class="mt-42">Задать свой вопрос</button>
+          </section>
+
+          <!-- === INVEST CONTENT START === -->
+          <section id="invest-content">
+            <form action="#" method="post">
+              <div class="form-title">
+                <svg
+                  width="32"
+                  height="29"
+                  viewBox="0 0 32 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 24.625H6.33333C4.46649 24.625 3.53307 24.625 2.82003 24.2571C2.19282 23.9336 1.68289 23.4173 1.36331 22.7822C1 22.0603 1 21.1152 1 19.225V6.4C1 4.50982 1 3.56473 1.36331 2.84278C1.68289 2.20774 2.19282 1.69143 2.82003 1.36785C3.53307 1 4.46649 1 6.33333 1H25.6667C27.5335 1 28.4669 1 29.18 1.36785C29.8072 1.69143 30.3171 2.20774 30.6367 2.84278C31 3.56473 31 4.50982 31 6.4V12.8125M1 7.75H31M26 28V17.875M31 22.9389L21 22.9375"
+                    stroke="rgba(207, 207, 207, 1)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Сумма инвестирования
+              </div>
+
+              <div class="input-control">
+                <input type="number" min="0" />
+                <label>₽</label>
+              </div>
+
+              <div class="invest-info">
+                Ваша выплата составит: <span>5 100 ₽</span>
+              </div>
+
+              <button type="submit" disabled>Инвестировать</button>
+
+              <div class="invest-warning mt-17">
+                У вас есть активная инвестиция, ожидайте выплату!
+              </div>
+            </form>
+          </section>
+          <!-- === INVEST CONTENT END === -->
+
+          <!-- === WITHDRAW CONTENT START === -->
+          <section id="withdraw-content">
+            <form action="#" method="post">
+              <div class="form-title">
+                <svg
+                  width="32"
+                  height="29"
+                  viewBox="0 0 32 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 24.625H6.33333C4.46649 24.625 3.53307 24.625 2.82003 24.2571C2.19282 23.9336 1.68289 23.4173 1.36331 22.7822C1 22.0603 1 21.1152 1 19.225V6.4C1 4.50982 1 3.56473 1.36331 2.84278C1.68289 2.20774 2.19282 1.69143 2.82003 1.36785C3.53307 1 4.46649 1 6.33333 1H25.6667C27.5335 1 28.4669 1 29.18 1.36785C29.8072 1.69143 30.3171 2.20774 30.6367 2.84278C31 3.56473 31 4.50982 31 6.4V12.8125M1 7.75H31M26 28V17.875M31 22.9389L21 22.9375"
+                    stroke="rgba(207, 207, 207, 1)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Вывод средств
+              </div>
+
+              <div class="input-control">
+                <input type="number" min="0" />
+                <label>₽</label>
+              </div>
+
+              <div class="invest-warning">
+                Минимальная сумма от 500 ₽ На вашем балансе недостаточно
+                средств!
+              </div>
+
+              <label class="label-text">
+                Укажите карту Сбербанка для вывода
+              </label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  pattern="\d{4}"
+                  minlength="4"
+                  maxlength="4"
+                />
+                <input
+                  type="text"
+                  pattern="\d{4}"
+                  minlength="4"
+                  maxlength="4"
+                />
+                <input
+                  type="text"
+                  pattern="\d{4}"
+                  minlength="4"
+                  maxlength="4"
+                />
+                <input
+                  type="text"
+                  pattern="\d{4}"
+                  minlength="4"
+                  maxlength="4"
+                />
+              </div>
+
+              <div class="invest-warning">Неверный номер карты!</div>
+
+              <label class="label-text">Укажите ФИО владельца карты</label>
+              <input type="text" />
+
+              <button type="submit" class="mt-31">Вывести</button>
+            </form>
+          </section>
+          <!-- === WITHDRAW CONTENT END === -->
+
+          <!-- === TOPUP CONTENT START === -->
+          <section id="topup-content">
+            <div id="topup-info">
+              <p>
+                Для пополнения вашего баланса, напишите мне в личные сообщения,
+                и я отправлю вам свои актуальные реквизиты для пополнения.
+                Минимальная сумма пополнения составляет от
+              </p>
+              <div id="topup-min">26 000 ₽</div>
+              <p>
+                Не забудьте указать свой номер
+                <span class="id">ID 10023</span><br />
+                в переписке со мной
+              </p>
+            </div>
+
+            <button>Написать мне</button>
+          </section>
+          <!-- === TOPUP CONTENT END === -->
+        </div>
+      </div>
+    </div>
+    <!-- === BOTTOM SHEET END === -->
+
+    <!-- === NAVBAR START === -->
+    <nav>
+      <a href="/">
+        <svg
+          width="29"
+          height="28"
+          viewBox="0 0 29 28"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.77778 10.6227V19.423C4.77778 21.7251 4.77778 22.8762 5.23192 23.7555C5.63139 24.529 6.26881 25.1579 7.05282 25.552C7.94412 26 9.11089 26 11.4444 26H17.5556C19.8891 26 21.0559 26 21.9472 25.552C22.7312 25.1579 23.3686 24.529 23.7681 23.7555C24.2222 22.8762 24.2222 21.7251 24.2222 19.423V4.07651M27 13.668L19.4538 5.39736C17.7376 3.51637 16.8795 2.57588 15.8689 2.22867C14.9813 1.92371 14.0153 1.92378 13.1277 2.22887C12.1172 2.57623 11.2592 3.51685 9.54325 5.39808L2 13.668M17.2778 26V17.7787H11.7222V26"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <div>Главная</div>
+      </a>
+
+      <a id="topup-nav-btn">
+        <img src="/img/topup-white.svg" alt="" />
+        <div>Пополнить</div>
+      </a>
+
+      <a id="withdraw-nav-btn">
+        <img src="/img/withdraw-2.svg" alt="" />
+        <div>Вывести</div>
+      </a>
+
+      <a id="faq-btn">
+        <img src="/img/chat.svg" alt="" />
+        <div>Вопросы</div>
+      </a>
+
+      <a href="/friends.html">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M6.66667 8.0001C6.66667 6.58562 7.22857 5.22908 8.22876 4.22889C9.22896 3.2287 10.5855 2.6668 12 2.6668C13.4145 2.6668 14.771 3.2287 15.7712 4.22889C16.7714 5.22908 17.3333 6.58562 17.3333 8.0001C17.3333 9.41458 16.7714 10.7711 15.7712 11.7713C14.771 12.7715 13.4145 13.3334 12 13.3334C10.5855 13.3334 9.22896 12.7715 8.22876 11.7713C7.22857 10.7711 6.66667 9.41458 6.66667 8.0001ZM17.0987 14.1641C18.3673 13.1145 19.2813 11.6991 19.7158 10.111C20.1503 8.52282 20.0841 6.83928 19.5264 5.2901C18.9687 3.74092 17.9465 2.40156 16.5994 1.4548C15.2523 0.508044 13.6459 0 11.9993 0C10.3528 0 8.74638 0.508044 7.39928 1.4548C6.05217 2.40156 5.03001 3.74092 4.47227 5.2901C3.91454 6.83928 3.8484 8.52282 4.28289 10.111C4.71737 11.6991 5.63132 13.1145 6.9 14.1641C2.648 15.6614 0 18.996 0 22.6667C0 23.0203 0.140476 23.3594 0.390524 23.6095C0.640573 23.8595 0.979711 24 1.33333 24C1.68696 24 2.02609 23.8595 2.27614 23.6095C2.52619 23.3594 2.66667 23.0203 2.66667 22.6667C2.66667 19.64 5.80667 16.0001 12 16.0001C18.1933 16.0001 21.3333 19.64 21.3333 22.6667C21.3333 23.0203 21.4738 23.3594 21.7239 23.6095C21.9739 23.8595 22.313 24 22.6667 24C23.0203 24 23.3594 23.8595 23.6095 23.6095C23.8595 23.3594 24 23.0203 24 22.6667C24 18.996 21.3547 15.6614 17.0987 14.1641Z"
+            fill="currentColor"
+          />
+        </svg>
+
+        <div>Друзья</div>
+      </a>
+    </nav>
+    <!-- === NAVBAR END === -->
+  </body>
+</html>

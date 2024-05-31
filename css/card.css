@@ -1,0 +1,67 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  max-width: 338px;
+  height: 201px;
+  max-height: 201px;
+  margin: 0 auto;
+  color: white;
+  border-radius: 15px;
+  padding: 24px 24px 16px;
+  /* Default: */
+  background: url("/img/card-bg.svg"),
+    linear-gradient(73.07deg, #5047ae 1.28%, #8176ef 98.03%);
+  box-shadow: 0px 0px 35px 0px rgba(101, 92, 203, 1);
+}
+
+.card-header {
+  gap: 12px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.card-header img {
+  width: 35px;
+}
+
+.card-body .balance-title {
+  font-size: 12px;
+}
+
+.card-body .balance {
+  font-size: 36px;
+  /* word-spacing: -3px; */
+}
+
+.card-body .balance span {
+  font-size: 21px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.card-footer .card-footer-left {
+  margin: auto 0;
+  font-size: 12px;
+}
+
+.card-footer .card-footer-right {
+  font-size: 10px;
+}
+
+.card-footer .card-footer-right .time {
+  font-size: 24px;
+}
+
+.card-bg-dark {
+  background: url("/img/card-bg.svg"),
+    linear-gradient(73.07deg, #282828 1.28%, #505050 98.03%);
+  box-shadow: 0px 0px 35px 0px rgba(114, 114, 114, 1);
+}
